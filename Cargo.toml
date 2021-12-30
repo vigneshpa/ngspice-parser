@@ -16,3 +16,4 @@ crate-type = ["rlib"]
 
 [dependencies]
 thiserror = "1.0.30"
+serde = { version = "1.0.132", features = ["derive"] }

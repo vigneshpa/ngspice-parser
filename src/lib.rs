@@ -1,16 +1,17 @@
-#[derive(Debug, Clone, Copy)]
+use serde::Serialize;
+#[derive(Debug, Clone, Copy, Serialize)]
 pub enum Flags {
     Complex,
     Real,
 }
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct VarData {
     pub name: String,
     pub typee: String,
     pub values: Vec<f64>,
     pub angles: Option<Vec<f64>>,
 }
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct Plot {
     pub title: String,
     pub date: String,
